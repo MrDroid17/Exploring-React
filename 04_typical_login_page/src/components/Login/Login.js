@@ -34,8 +34,8 @@ const Login = (props) => {
   const [emailState, dispatchEmail] = useReducer(emailReducer, { value: '', isValid: null });
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, { value: '', isValid: null });
 
-  const {isValid: emailIsValid} = emailState;
-  const {isValid: passwordIsValid} = passwordState;
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = passwordState;
 
   // useEffect(() => {
   //   console.log("CLEANUP RUNNING...");
@@ -68,7 +68,7 @@ const Login = (props) => {
   };
 
   const passwordChangeHandler = (event) => {
-    dispatchPassword({type: "PASSWORD_INPUT", val: event.target.value});
+    dispatchPassword({ type: "PASSWORD_INPUT", val: event.target.value });
     // setFormIsValid(
     //   emailState.isValid && event.target.value.trim().length > 6
     // );
@@ -79,7 +79,7 @@ const Login = (props) => {
   };
 
   const validatePasswordHandler = () => {
-    dispatchPassword({type: "INPUT_BLUR"});
+    dispatchPassword({ type: "INPUT_BLUR" });
   };
 
   const submitHandler = (event) => {
